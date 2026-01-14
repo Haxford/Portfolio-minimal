@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HAXFORD Search</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- SVG sprite for small icons (keeps markup small and reusable) -->
+        <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+            <symbol id="icon-clear" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="#f1f3f4"/>
+                <path d="M8 8l8 8M16 8l-8 8" stroke="#5f6368" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+            <symbol id="icon-search" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#9aa0a6"/>
+            </symbol>
+        </svg>
+
+        <div class="haxford-container" id="main-logo">
+            <div class="haxford-logo">HAX<span>FORD</span></div>
+        </div>
+        <div class="search-container">
+            <form id="search-form">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20">
+                        <use href="#icon-search"/>
+                    </svg>
+                    <input id="q" name="q" type="search" placeholder="Search or type a URL" autocomplete="off">
+                    <button type="button" class="clear-btn" id="clear-btn" aria-label="Clear search">
+                        <svg width="20" height="20">
+                            <use href="#icon-clear"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="suggestions-dropdown" id="suggestions"></div>
+            </form>
+            <div class="search-buttons" id="search-buttons">
+                <button type="submit" form="search-form" class="search-btn">Search</button>
+                <button type="button" id="lucky-btn">I'm Feeling Lucky</button>
+            </div>
+            <p id="privacy-text">We protect your privacy. <a href="privacy.html">Learn how!</a></p>
+        </div>
+
+        <!-- Results container -->
+        <div class="results-container" id="results-container">
+            <div class="results-header">
+                <a href="index.html" class="haxford-logo-small">HAX<span>FORD</span></a>
+                <div class="search-wrapper-small">
+                    <svg class="search-icon" width="20" height="20">
+                        <use href="#icon-search"/>
+                    </svg>
+                    <input id="q-small" type="search" autocomplete="off" readonly>
+                </div>
+            </div>
+            <div id="results"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
