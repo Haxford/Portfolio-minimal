@@ -4,7 +4,13 @@ date: "2025-11-20"
 description: "Why I ditched the mouse and embraced modal editing for my daily workflow."
 ---
 
-It started as a curiosity. I watched a few YouTube videos of people flying through code without touching their mouse, and I was hooked.
+It started as a curiosity. I watched The Primeagen flying through code without touching his mouse, and I was hooked. It wasn't just about speed—it was about mastery.
+
+## Why I Switched
+
+I wanted to become better at programming, not just writing code. I felt that modern IDEs, while powerful, were a "black box." Everything is pre-packaged, abstracted away, and "magic."
+
+I wanted a blank slate. I wanted an environment that I had to build, understand, and configure myself. I knew that forcing myself to understand my tools would push me to understand the underlying systems better.
 
 ## The Learning Curve
 
@@ -14,7 +20,7 @@ But I forced myself to stick with it. I uninstalled VS Code (temporarily) to rem
 
 ## My Configuration
 
-I started with [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), which gave me a solid foundation without being a "black box" distribution like LazyVim.
+I'm currently running [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) by TJ DeVries. It's the perfect middle ground—it gives you a solid, working editor out of the box, but the configuration is small and well-commented enough that you can actually read and understand it. It's not a distribution like LazyVim that hides the details; it's a starting point for your own journey.
 
 Key plugins I rely on:
 - **Telescope**: For fuzzy finding files
@@ -28,4 +34,4 @@ Key plugins I rely on:
 2.  **Remote editing**: SSHing into a server and having my full editor environment is a game changer.
 3.  **Resources**: Neovim uses a fraction of the RAM that VS Code does.
 
-It's not for everyone, but for me, it's made coding fun again.
+It's not for everyone, but for me, it's made coding fun again. It turned a chore into a craft.
