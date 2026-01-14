@@ -217,8 +217,43 @@ function performSearch(query, searchType = 'all', page = 1) {
     fetchDuckDuckGoResults(query, searchType, page);
 }
 
-// Fetch results (MOCK DATA FOR PORTFOLIO DEMO)
+// Fetch results via API Proxy (with fallback to Mock Data)
 async function fetchDuckDuckGoResults(query, searchType = 'all', page = 1) {
+    try {
+        // Try the real API proxy first
+        const proxyUrl = `/api/search?q=${encodeURIComponent(query)}&type=${searchType}&page=${page}`;
+        const response = await fetch(proxyUrl);
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            // If API returns valid results, use them
+            if (data && data.results && data.results.length > 0) {
+                const results = [];
+                data.results.forEach(result => {
+                    results.push({
+                        title: result.title,
+                        url: result.url,
+                        description: result.content || result.title,
+                        img_src: result.img_src,
+                        thumbnail: result.thumbnail
+                    });
+                });
+                displayResults(results, page, searchType);
+                return;
+            }
+        }
+        throw new Error('API failed or returned no results');
+
+    } catch (e) {
+        console.warn('API search failed, falling back to mock data:', e);
+        // Fallback to Mock Data generator
+        await fetchMockResults(query, searchType, page);
+    }
+}
+
+// Fetch results (MOCK DATA FALLBACK)
+async function fetchMockResults(query, searchType = 'all', page = 1) {
     // Simulate network delay for realism
     await new Promise(resolve => setTimeout(resolve, 800));
 
