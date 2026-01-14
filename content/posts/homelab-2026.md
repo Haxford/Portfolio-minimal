@@ -7,16 +7,19 @@ description: "A look at my current infrastructure: Proxmox compute nodes, Unraid
 Here is a breakdown of the current hardware powering my home infrastructure. I'm currently in the process of upgrading the networking stack and expanding my compute capacity.
 
 ## Compute Cluster
+
 - **Beelink SER5** (Proxmox Host #1)
   - Primary compute node for active services.
 - **Zimaboard 2** (Planned - Proxmox Host #2)
   - Future addition to establish a high-availability cluster.
 
 ## Storage
+
 - **Terramaster NAS** running **Unraid**
   - Bulk storage for backups, media, and archives.
 
 ## Networking
+
 - **UniFi Cloud Gateway Ultra**
   - Primary router and gateway.
 - **Netgear Switch**

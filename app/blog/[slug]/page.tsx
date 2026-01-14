@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -42,8 +43,8 @@ export default async function PostPage({ params }: PostPageProps) {
         </time>
       </header>
 
-      <div className="prose prose-invert prose-neutral max-w-none prose-headings:font-bold prose-a:text-blue-400 hover:prose-a:text-blue-300 prose-code:text-blue-300 prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+      <div className="prose prose-invert prose-neutral max-w-none prose-headings:font-bold prose-a:text-blue-400 hover:prose-a:text-blue-300 prose-code:text-blue-300 prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800 prose-ul:list-disc prose-ul:ml-4 prose-ol:list-decimal prose-ol:ml-4">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
       </div>
     </article>
   );
