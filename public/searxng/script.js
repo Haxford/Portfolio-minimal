@@ -217,51 +217,27 @@ function performSearch(query, searchType = 'all', page = 1) {
     fetchDuckDuckGoResults(query, searchType, page);
 }
 
-// Fetch results from SearXNG via local proxy
+// Fetch results (MOCK DATA FOR PORTFOLIO DEMO)
 async function fetchDuckDuckGoResults(query, searchType = 'all', page = 1) {
+    // Simulate network delay for realism
+    await new Promise(resolve => setTimeout(resolve, 800));
+
     try {
-        // Use local proxy server to bypass CORS
-        const proxyUrl = `http://localhost:3000/search?q=${encodeURIComponent(query)}&type=${searchType}&page=${page}`;
-
-        const response = await fetch(proxyUrl, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error('Proxy server error');
-        }
-
-        const data = await response.json();
-
-        // Check if we got valid results
-        if (!data || !data.results || data.results.length === 0) {
-            resultsDiv.innerHTML = `
-                <div class="no-results">
-                    <h2>No results found</h2>
-                    <p>Try different search terms.</p>
-                </div>
-            `;
-            return;
-        }
-
-        // Build results array from SearXNG response
+        // Generate mock results based on the query
+        const mockData = generateMockResults(query, searchType, page);
+        
+        // Build results array from mock response
         const results = [];
 
-        if (data.results && data.results.length > 0) {
-            // Get top 20 results
-            data.results.slice(0, 20).forEach(result => {
-                if (result.url && result.title) {
-                    results.push({
-                        title: result.title,
-                        url: result.url,
-                        description: result.content || result.title,
-                        img_src: result.img_src,
-                        thumbnail: result.thumbnail
-                    });
-                }
+        if (mockData.results && mockData.results.length > 0) {
+            mockData.results.forEach(result => {
+                results.push({
+                    title: result.title,
+                    url: result.url,
+                    description: result.content || result.title,
+                    img_src: result.img_src,
+                    thumbnail: result.thumbnail
+                });
             });
         }
 
@@ -270,7 +246,7 @@ async function fetchDuckDuckGoResults(query, searchType = 'all', page = 1) {
             resultsDiv.innerHTML = `
                 <div class="no-results">
                     <h2>No results found</h2>
-                    <p>Try searching for something else or check your spelling.</p>
+                    <p>Try searching for "linux", "neovim", or "haxford" to see demo results.</p>
                 </div>
             `;
         } else {
@@ -286,6 +262,54 @@ async function fetchDuckDuckGoResults(query, searchType = 'all', page = 1) {
             </div>
         `;
     }
+}
+
+// Generator for mock results so the UI actually works
+function generateMockResults(query, type, page) {
+    const q = query.toLowerCase();
+    const results = [];
+    
+    // Easter egg for the creator
+    if (q.includes('harry') || q.includes('axford') || q.includes('haxford')) {
+        results.push({
+            title: "Harry Axford - Portfolio",
+            url: "https://haxford.dev",
+            content: "The professional portfolio of Harry Axford. IT Technician, Linux Sysadmin, and Cloud Engineer.",
+            img_src: "https://github.com/Haxford.png"
+        });
+        results.push({
+            title: "Haxford (Harry Axford) · GitHub",
+            url: "https://github.com/Haxford",
+            content: "Harry Axford (Haxford) is a developer specializing in Linux, Neovim, and Cloud technologies.",
+            img_src: "https://github.com/Haxford.png"
+        });
+    }
+
+    // Generic results generator to fill the page
+    const topics = [
+        { title: `${query} - Wikipedia`, url: `https://en.wikipedia.org/wiki/${query}`, content: `${query} is a topic that many people find interesting. This is a mock search result generated for demonstration purposes.` },
+        { title: `The Ultimate Guide to ${query}`, url: `https://example.com/guide/${query}`, content: `Everything you ever wanted to know about ${query}. Tutorials, guides, and expert advice.` },
+        { title: `${query} Official Website`, url: `https://www.${query.replace(/\s+/g, '')}.com`, content: `Official home page for ${query}. Download, documentation, and support.` },
+        { title: `Latest News about ${query}`, url: `https://news.example.com/${query}`, content: `Breaking news and latest updates regarding ${query} from around the world.` },
+        { title: `How to configure ${query} on Arch Linux`, url: `https://wiki.archlinux.org/title/${query}`, content: `Arch Linux Wiki entry for ${query}. Installation, configuration, and troubleshooting.` },
+        { title: `Best ${query} Alternatives in 2025`, url: `https://alternativeto.net/${query}`, content: `Find the best open-source alternatives to ${query}. User reviews and comparisons.` },
+        { title: `Learn ${query} in 10 Minutes`, url: `https://youtube.com/watch?v=${query}`, content: `Fast-paced tutorial on getting started with ${query}.` },
+        { title: `${query} Documentation`, url: `https://docs.${query.replace(/\s+/g, '')}.org`, content: `Comprehensive API reference and documentation for ${query}.` }
+    ];
+
+    // Add generic topics to results
+    topics.forEach(t => results.push(t));
+
+    // Add some random filler to make pagination look real
+    for (let i = 0; i < 5; i++) {
+        results.push({
+            title: `${query} discussion on Reddit`,
+            url: `https://reddit.com/r/${query}/comments/${i}`,
+            content: `Join the discussion about ${query} on Reddit. Community questions, answers, and memes.`
+        });
+    }
+
+    return { results };
 }
 
 // Display search results
