@@ -36,19 +36,24 @@ export default function Home() {
           {/* Project 1 */}
           <div className="group border border-neutral-800 bg-neutral-900/50 p-6 rounded-lg hover:border-neutral-600 transition-colors">
             <div className="flex justify-between items-start mb-4">
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">SearXNG Interface</h3>
+              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">SearXNG Meta-Search</h3>
               <span className="text-xs font-bold text-blue-400 bg-blue-400/10 px-2 py-1 rounded">FEATURED</span>
             </div>
-            <p className="text-sm text-neutral-400 mb-4">Custom frontend connected to self-hosted SearXNG instance.</p>
+            <p className="text-sm text-neutral-400 mb-4">
+              Privacy-focused search interface utilizing Next.js API routes as a smart proxy. 
+              Implements a failover strategy that aggregates results from multiple public SearXNG instances, 
+              ensuring high availability and resilience without the overhead of self-hosting the engine.
+            </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">HTML/CSS</span>
-              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Docker</span>
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Next.js API</span>
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Proxy Pattern</span>
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Resilience</span>
             </div>
             <div className="flex items-center gap-2 mb-4 p-2 bg-neutral-950 rounded border border-neutral-800 w-fit">
                <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center text-white">
                  <Search size={14} strokeWidth={3} />
                </div>
-               <span className="text-xs text-neutral-400 font-mono">Custom Logo</span>
+               <span className="text-xs text-neutral-400 font-mono">Custom Interface</span>
             </div>
             <div className="flex gap-4">
               <a href="/searxng/index.html" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
