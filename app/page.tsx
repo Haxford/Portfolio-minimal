@@ -59,7 +59,7 @@ export default function Home() {
               <a href="/searxng/index.html" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 Live Demo <ExternalLink size={12} />
               </a>
-              <a href="https://github.com/Haxford" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
+              <a href="https://github.com/Haxford/search-engine-Project" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 GitHub <ExternalLink size={12} />
               </a>
             </div>
