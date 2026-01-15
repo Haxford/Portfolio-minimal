@@ -57,7 +57,7 @@ export default function CV() {
           <ul className="space-y-4 text-neutral-300">
             <li>
               <div className="flex justify-between">
-                <span>Level 3 Cloud and Networking Apprenticeship</span>
+                <span>Level 3 Cloud and Networking Apprenticeship (Level 3 Azure Support Specialist)</span>
                 <span className="text-neutral-500 text-sm">Distinction (2023-2025)</span>
               </div>
               <div className="text-neutral-500 text-sm mt-1">QA</div>
