@@ -36,13 +36,12 @@ export default function Home() {
           {/* Project 1 */}
           <div className="group border border-neutral-800 bg-neutral-900/50 p-6 rounded-lg hover:border-neutral-600 transition-colors">
             <div className="flex justify-between items-start mb-4">
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">SearXNG Meta-Search</h3>
+              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">HAXFORD - SearxNG</h3>
               <span className="text-xs font-bold text-blue-400 bg-blue-400/10 px-2 py-1 rounded">FEATURED</span>
             </div>
             <p className="text-sm text-neutral-400 mb-4">
-              Privacy-focused search interface utilizing Next.js API routes as a smart proxy. 
-              Implements a failover strategy that aggregates results from multiple public SearXNG instances, 
-              ensuring high availability and resilience without the overhead of self-hosting the engine.
+              Privacy-focused search interface using Next.js API routes as a smart proxy. 
+              Aggregates results from multiple public SearXNG instances for resilience.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Next.js API</span>
