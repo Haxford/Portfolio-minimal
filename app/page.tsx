@@ -99,23 +99,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 4 */}
-          <div className="border border-neutral-800 bg-neutral-900/50 p-6 rounded-lg hover:border-neutral-600 transition-colors">
-            <h3 className="font-semibold text-white mb-2">Allocu-Sheets</h3>
-            <p className="text-sm text-neutral-400 mb-4">Experimental spreadsheet application interface.</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">React</span>
-              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Prototype</span>
-            </div>
-            <div className="flex gap-4">
-              <a href="https://allocu-gstf4ccjj-harryaxford.vercel.app/" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
-                Live Demo <ExternalLink size={12} />
-              </a>
-              <a href="https://github.com/Haxford" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
-                GitHub <ExternalLink size={12} />
-              </a>
-            </div>
-          </div>
+
         </div>
       </section>
 
