@@ -1,37 +1,27 @@
 ---
-title: "Moving from VS Code to Neovim"
+title: "My Neovim Journey (So Far)"
 date: "2025-11-20"
-description: "Why I ditched the mouse and embraced modal editing for my daily workflow."
+description: "From VS Code to Neovim to Zed — where I am now as a beginner learning to code."
 ---
 
-It started as a curiosity. I watched The Primeagen flying through code without touching his mouse, and I was hooked. It wasn't just about speed—it was about mastery.
+I started using Neovim because I watched The Primeagen fly through code without touching his mouse. It looked fast. It looked intentional. I wanted some of that.
 
-## Why I Switched
+## What I Actually Learned
 
-I wanted to become better at programming, not just writing code. I felt that modern IDEs, while powerful, were a "black box." Everything is pre-packaged, abstracted away, and "magic."
+I'll be honest — I didn't stick with Neovim as my main editor. After a few weeks I moved to Zed as my primary editor. Here's why:
 
-I wanted a blank slate. I wanted an environment that I had to build, understand, and configure myself. I knew that forcing myself to understand my tools would push me to understand the underlying systems better.
+ Zed has AI built in, removes the friction of learning a new workflow while also learning to code, and honestly removes a lot of the learning curve that would have slowed me down. I use it to write actual code and to figure out how to use AI effectively while I'm at it.
 
-## The Learning Curve
+So what do I actually know in Neovim? Basic movements, a few shortcuts, and the modes. That's it. Enough to get by when I need to edit a config file in the terminal or make a quick change without switching context.
 
-I won't lie—the first week was painful. My muscle memory fought me every step of the way. `hjkl` for navigation felt alien.
+## What I Still Use Neovim For
 
-But I forced myself to stick with it. I uninstalled VS Code (temporarily) to remove the safety net.
+Honestly, mostly config files. `~/.config/nvim/`, Docker Compose files, quick edits on a remote server. The muscle memory for `:wq` and `/search` is useful even if I'm not doing serious development in it.
 
-## My Configuration
+I still have my Neovim config and I still use it — it just isn't my main workflow anymore.
 
-I'm currently running [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) by TJ DeVries. It's the perfect middle ground—it gives you a solid, working editor out of the box, but the configuration is small and well-commented enough that you can actually read and understand it. It's not a distribution like LazyVim that hides the details; it's a starting point for your own journey.
+## The Honest Take
 
-Key plugins I rely on:
-- **Telescope**: For fuzzy finding files
-- **Harpoon**: For quick file switching
-- **Treesitter**: For better syntax highlighting
-- **LSP Zero**: For easy LSP setup
+I think the Neovim journey was worth it even if I don't use it as my main editor. I learned more about how editors actually work, I got comfortable navigating a terminal, and I understand the philosophy behind modal editing even if I'm not flying around in it. For someone learning to code, I'd recommend spending time with it — even if you move on, you'll be better for it.
 
-## Why stick with it?
-
-1.  **Speed**: Once the commands clicked, editing text became faster than thinking about it.
-2.  **Remote editing**: SSHing into a server and having my full editor environment is a game changer.
-3.  **Resources**: Neovim uses a fraction of the RAM that VS Code does.
-
-It's not for everyone, but for me, it's made coding fun again. It turned a chore into a craft.
+Would I go back? Maybe. But for now Zed does what I need, and I can always drop into Neovim when the situation calls for it.

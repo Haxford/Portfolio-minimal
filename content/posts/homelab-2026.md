@@ -1,26 +1,36 @@
 ---
 title: "My Homelab Setup (2026)"
 date: "2026-01-14"
-description: "A look at my current infrastructure: Proxmox compute nodes, Unraid storage, and UniFi networking."
+description: "The gaming PC is now my Proxmox host, the Beelink is a Linux sandbox, and the homelab is quietly serving the media stack."
 ---
 
-Here is a breakdown of the current hardware powering my home infrastructure. I'm currently in the process of upgrading the networking stack and expanding my compute capacity.
+My homelab has evolved since the last update. Here's where things stand.
 
-## Compute Cluster
+## Compute
 
-- **Beelink SER5** (Proxmox Host #1)
-  - Primary compute node for active services.
-- **Zimaboard 2** (Planned - Proxmox Host #2)
-  - Future addition to establish a high-availability cluster.
+The main Proxmox host is now a **gaming PC** — it was gathering dust so I put it to work:
+
+- **CPU:** Ryzen 7 7800X3D
+- **GPU:** RTX 5080
+- **OS:** Proxmox VE 9.2
+
+The gaming hardware is overkill for homelab work, but it was sitting there and it runs Proxmox perfectly fine. Once the 5080 GPU shortage eases I'll probably grab something cheaper for compute-only tasks.
+
+The **Beelink SER5** is now running **OpenMediaVault** — my Linux sandbox for anything that needs a quick terminal environment without touching the main cluster.
+
+Still have the **Zimaboard 2 1661** on standby for future projects.
 
 ## Storage
 
 - **Terramaster NAS** running **Unraid**
-  - Bulk storage for backups, media, and archives.
+  - Bulk storage, media, backups.
 
-## Networking
+## Media Stack
 
-- **UniFi Cloud Gateway Ultra**
-  - Primary router and gateway.
-- **Netgear Switch**
-  - Currently serving as the core switch, with plans to replace it with UniFi hardware for full integration into the controller.
+Currently running the media stack on Proxmox. I won't go into specifics publicly — let's just say it's the usual suspects for self-hosted media.
+
+## What's Next
+
+**Home Assistant** is on the list. The use case is for my mum — she wants something like a voice assistant that can do things like "hello [device], turn the WiFi off until homework is done." That's a fun automation challenge to work on.
+
+Networking stack is still UniFi Cloud Gateway Ultra + Netgear switch for now, with plans to move fully to UniFi hardware when the budget allows.
