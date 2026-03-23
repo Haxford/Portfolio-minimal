@@ -1,6 +1,6 @@
 ---
 title: "My Homelab Setup (2026)"
-date: "2026-01-14"
+date: "2026-03-08"
 description: "The gaming PC is now my Proxmox host, the Beelink is a Linux sandbox, and the homelab is quietly serving the media stack."
 ---
 
