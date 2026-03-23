@@ -90,6 +90,9 @@ export default function Home() {
               <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">JavaScript</span>
             </div>
             <div className="flex gap-4">
+              <a href="https://password-generator-gamma-ruby-19.vercel.app" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
+                Live Demo <ExternalLink size={12} />
+              </a>
               <a href="https://github.com/Haxford/Password-generator" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 GitHub <ExternalLink size={12} />
               </a>
