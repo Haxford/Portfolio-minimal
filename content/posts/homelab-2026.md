@@ -33,4 +33,6 @@ Currently running the media stack on Proxmox. I won't go into specifics publicly
 
 **Home Assistant** is on the list. The use case is for my mum — she wants something like a voice assistant that can do things like "hello [device], turn the WiFi off until homework is done." That's a fun automation challenge to work on.
 
+**PaperNGX** is also on the list — I want to replace my disorganised personal file folders with a proper document management system. Tags, categories, searchable — sort out the chaos.
+
 Networking stack is still UniFi Cloud Gateway Ultra + Netgear switch for now, with plans to move fully to UniFi hardware when the budget allows.
