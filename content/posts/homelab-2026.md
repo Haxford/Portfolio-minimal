@@ -16,7 +16,7 @@ The main Proxmox host is now a **gaming PC** — it was gathering dust so I put 
 
 The gaming hardware is overkill for homelab work, but it was sitting there and it runs Proxmox perfectly fine. Once the 5080 GPU shortage eases I'll probably grab something cheaper for compute-only tasks.
 
-The **Beelink SER5** is now running **OpenMediaVault** — my Linux sandbox for anything that needs a quick terminal environment without touching the main cluster.
+The **Beelink SER5** is now running **Omarchy** — my Linux sandbox for anything that needs a quick terminal environment without touching the main cluster.
 
 Still have the **Zimaboard 2 1661** on standby for future projects.
 
