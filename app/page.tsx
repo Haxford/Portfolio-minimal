@@ -196,7 +196,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Platforms</h3>
-            <p className="text-neutral-400 text-sm">Arch Linux, macOS, Windows</p>
+            <p className="text-neutral-400 text-sm">Linux, macOS, Windows</p>
           </div>
         </div>
       </section>
