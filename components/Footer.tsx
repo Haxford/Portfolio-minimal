@@ -3,10 +3,16 @@ export default function Footer() {
     <footer className="border-t border-neutral-800 mt-20 py-8 bg-neutral-950 text-neutral-500 text-sm text-center">
       <div className="max-w-4xl mx-auto px-6 space-y-2">
         <p>&copy; {new Date().getFullYear()} Harry Axford. Built with Next.js & Tailwind.</p>
-        <p className="text-xs text-neutral-600">
+        <p className="text-xs text-neutral-600 flex items-center justify-center gap-1.5">
           Maintained by{" "}
           <span className="text-orange-400 font-medium">Hex</span>
-          {" "}🔮 from{" "}
+          {" "}
+          <img
+            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/openclaw.png"
+            alt="OpenClaw"
+            className="inline-block w-4 h-4"
+          />
+          from{" "}
           <a
             href="https://openclaw.ai"
             target="_blank"
