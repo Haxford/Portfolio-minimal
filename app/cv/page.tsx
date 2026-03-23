@@ -34,7 +34,7 @@ export default function CV() {
             <div>
               <div className="flex justify-between items-baseline mb-2">
                 <h3 className="font-semibold text-white text-lg">IT Technician</h3>
-                <span className="text-sm text-neutral-500 font-mono">2021 - Present</span>
+                <span className="text-sm text-neutral-500 font-mono">2022 - Present</span>
               </div>
               <div className="text-blue-400 text-sm mb-3">Oasis Community Learning</div>
               <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-300 text-sm">
