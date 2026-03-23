@@ -121,6 +121,7 @@ export default function Home() {
             <div className="flex justify-between items-start mb-4">
               <h3 className="font-semibold text-white mb-2">Jellyfin Request Plugin</h3>
               <span className="text-xs font-bold text-orange-400/80 bg-orange-400/10 px-2 py-1 rounded">AI Assisted</span>
+              <span className="text-xs font-bold text-yellow-400/80 bg-yellow-400/10 px-2 py-1 rounded">In Progress</span>
             </div>
             <p className="text-sm text-neutral-400 mb-4">
               A Jellyfin plugin that adds a one-click request button to movie and TV show 
