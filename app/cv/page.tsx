@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MapPin, Phone } from 'lucide-react';
+import { Mail, Linkedin, MapPin } from 'lucide-react';
 
 export default function CV() {
   return (
@@ -11,18 +11,14 @@ export default function CV() {
             <MapPin size={14} />
             London, UK
           </span>
-          <a href="mailto:harryaxford@email.com" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="mailto:harry.axford@pm.me" className="flex items-center gap-2 hover:text-white transition-colors">
             <Mail size={14} />
-            harryaxford@email.com
+            harry.axford@pm.me
           </a>
-          <a href="https://linkedin.com/in/harryaxford" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/harry-axford-031515167/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
             <Linkedin size={14} />
-            linkedin.com/in/harryaxford
+            linkedin.com/in/harry-axford-031515167
           </a>
-          <span className="flex items-center gap-2">
-            <Phone size={14} />
-            07XXX XXX XXX
-          </span>
         </div>
       </header>
 
