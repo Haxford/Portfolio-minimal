@@ -25,14 +25,13 @@ Still have the **Zimaboard 2 1661** on standby for future projects.
 - **Terramaster NAS** running **Unraid**
   - Bulk storage, media, backups.
 
-## Media Stack
+## Services
 
-Currently running the media stack on Proxmox. I won't go into specifics publicly — let's just say it's the usual suspects for self-hosted media.
+All homelab services run on [theaxford.com](https://theaxford.com) — the media stack is currently live, with more planned.
 
-## What's Next
-
-**Home Assistant** is on the list. The use case is for my mum — she wants something like a voice assistant that can do things like "hello [device], turn the WiFi off until homework is done." That's a fun automation challenge to work on.
-
-**PaperNGX** is also on the list — I want to replace my disorganised personal file folders with a proper document management system. Tags, categories, searchable — sort out the chaos.
+**Planned:**
+- **Immich** — self-hosted Google Photos alternative
+- **Home Assistant** — smart home automation for my mum's voice assistant idea ("turn the WiFi off until homework is done")
+- **PaperNGX** — replace disorganised personal file folders with a proper document management system. Tags, categories, searchable.
 
 Networking stack is still UniFi Cloud Gateway Ultra + Netgear switch for now, with plans to move fully to UniFi hardware when the budget allows.
