@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ExternalLink, Server, Terminal, Network, ShieldCheck, Search } from 'lucide-react';
+import { ExternalLink, Server, Terminal, Network, ShieldCheck, Search, Bot, Cpu } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -14,6 +14,20 @@ export default function Home() {
         </p>
       </section>
 
+      {/* OPEN TO WORK */}
+      <section>
+        <div className="border border-green-500/30 bg-green-500/10 rounded-lg px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="flex items-center gap-3">
+            <div className="h-3 w-3 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-green-300 font-semibold text-sm uppercase tracking-wide">Open to Work</span>
+          </div>
+          <p className="text-neutral-300 text-sm">
+            IT Engineer · Junior DevOps · Cloud Support · Systems Administrator
+            <span className="text-neutral-500 ml-2">· London, UK</span>
+          </p>
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section>
         <h2 className="text-xs font-bold text-neutral-500 uppercase tracking-widest mb-4">About</h2>
@@ -24,6 +38,7 @@ export default function Home() {
           and hands-on homelab work. 
           <span className="block mt-4 text-neutral-400">
             Daily driver: <span className="text-white">Arch Linux + Neovim</span>.
+            Also running MacOS — because sometimes you just need a Mac.
           </span>
         </p>
       </section>
@@ -75,7 +90,7 @@ export default function Home() {
               <a href="https://password-generator-git-main-harryaxford.vercel.app" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 Live Demo <ExternalLink size={12} />
               </a>
-              <a href="https://github.com/Haxford" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
+              <a href="https://github.com/Haxford/Password-generator" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 GitHub <ExternalLink size={12} />
               </a>
             </div>
@@ -92,12 +107,37 @@ export default function Home() {
               <a href="https://keepingscore1.netlify.app" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 Live Demo <ExternalLink size={12} />
               </a>
-              <a href="https://github.com/Haxford" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
+              <a href="https://github.com/Haxford/keeping-score" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
                 GitHub <ExternalLink size={12} />
               </a>
             </div>
           </div>
 
+          {/* Project 4 */}
+          <div className="border border-neutral-800 bg-neutral-900/50 p-6 rounded-lg hover:border-neutral-600 transition-colors">
+            <div className="flex justify-between items-start mb-4">
+              <h3 className="font-semibold text-white mb-2">Jellyfin Request Plugin</h3>
+              <span className="text-xs font-bold text-orange-400/80 bg-orange-400/10 px-2 py-1 rounded">AI Assisted</span>
+            </div>
+            <p className="text-sm text-neutral-400 mb-4">
+              A Jellyfin plugin that adds a one-click request button to movie and TV show 
+              detail pages. Requests are sent directly to your Jellyseerr instance.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">C#</span>
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Jellyfin Plugin</span>
+              <span className="text-xs px-2 py-1 bg-neutral-800 rounded text-neutral-300">Personal Tool</span>
+            </div>
+            <div className="flex items-center gap-2 mb-4 p-2 bg-neutral-950 rounded border border-neutral-800 w-fit">
+              <Bot size={14} className="text-orange-400" />
+              <span className="text-xs text-neutral-400 font-mono">Built with AI assistance</span>
+            </div>
+            <div className="flex gap-4">
+              <a href="https://github.com/Haxford/Jellyfin-Jellyseer-request" className="text-sm flex items-center gap-1 text-neutral-500 hover:text-white transition-colors">
+                GitHub <ExternalLink size={12} />
+              </a>
+            </div>
+          </div>
 
         </div>
       </section>
@@ -150,6 +190,10 @@ export default function Home() {
           <div>
             <h3 className="font-medium text-white mb-2">Tools</h3>
             <p className="text-neutral-400 text-sm">Neovim, Git, Linux (Arch daily driver)</p>
+          </div>
+          <div>
+            <h3 className="font-medium text-white mb-2">Platforms</h3>
+            <p className="text-neutral-400 text-sm">Arch Linux, macOS, Windows</p>
           </div>
         </div>
       </section>
