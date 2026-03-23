@@ -27,7 +27,7 @@ Still have the **Zimaboard 2 1661** on standby for future projects.
 
 ## Services
 
-All homelab services run on theaxford.com — the media stack is currently live, with more planned.
+Currently running the media stack. More services planned.
 
 **Planned:**
 - **Immich** — self-hosted Google Photos alternative
