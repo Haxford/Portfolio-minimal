@@ -32,12 +32,15 @@ export default function Home() {
       <section>
         <h2 className="text-xs font-bold text-neutral-500 uppercase tracking-widest mb-4">About</h2>
         <p className="text-neutral-300 leading-relaxed max-w-2xl">
-          IT Technician with 3 years supporting multi-site educational environments. 
-          Specializing in Microsoft Intune, Apple devices, and M365 administration. 
-          Currently building toward Linux system administration through certifications 
-          and hands-on homelab work. 
+          IT Technician with 3 years supporting multi-site educational environments across the Croydon area. Primary contact for two academies within a seven-school cluster — independent ownership of day-to-day operations and infrastructure.
+          <span className="block mt-4 text-neutral-300">
+            Specializing in Microsoft Intune, Apple device management (Jamf → Intune migration), and M365 administration. Comfortable with Azure, Cisco Meraki networking, and on-premises server infrastructure.
+          </span>
+          <span className="block mt-4 text-neutral-300">
+            When documentation didn&apos;t exist, I built a cluster-wide knowledge base from scratch — documenting IPs, VLANs, device configs, and site processes. It&apos;s now maintained by the whole team.
+          </span>
           <span className="block mt-4 text-neutral-400">
-            Daily driver: <span className="text-white">Arch Linux + Neovim</span>.
+            Daily driver: <span className="text-white">Linux + Neovim</span>.
             Also running MacOS — because sometimes you just need a Mac.
           </span>
         </p>
@@ -189,7 +192,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Tools</h3>
-            <p className="text-neutral-400 text-sm">Neovim, Git, Linux (Arch daily driver)</p>
+            <p className="text-neutral-400 text-sm">Neovim, Git, Linux</p></p>
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Platforms</h3>
