@@ -4,7 +4,7 @@ date: "2025-11-20"
 description: "From VS Code to Neovim to Zed — where I am now as a beginner learning to code."
 ---
 
-I got into Neovim after watching [The Primeagen](https://www.youtube.com/@ThePrimeagen) fly through code without touching his mouse. It looked fast. It looked intentional. I wanted some of that.
+I got into Neovim after watching [The Primeagen](https://www.youtube.com/@ThePrimeTimeagen) fly through code without touching his mouse. It looked fast. It looked intentional. I wanted some of that.
 
 ## Why I Switched
 
