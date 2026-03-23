@@ -192,7 +192,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Tools</h3>
-            <p className="text-neutral-400 text-sm">Neovim, Git, Linux</p></p>
+            <p className="text-neutral-400 text-sm">Neovim, Git, Linux</p>
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Platforms</h3>
