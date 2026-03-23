@@ -188,7 +188,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Languages</h3>
-            <p className="text-neutral-400 text-sm">JavaScript, Bash, Python (learning), Lua</p>
+            <p className="text-neutral-400 text-sm">JavaScript, Python (learning), Bash, Lua</p>
           </div>
           <div>
             <h3 className="font-medium text-white mb-2">Tools</h3>
