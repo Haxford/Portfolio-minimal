@@ -12,6 +12,9 @@ export default function Navbar() {
           <Link href="/blog" className="hover:text-white text-neutral-400 transition-colors">
             Blog
           </Link>
+          <Link href="/backend" className="hover:text-white text-neutral-400 transition-colors">
+            Backend
+          </Link>
           <Link href="/cv" className="hover:text-white text-neutral-400 transition-colors">
             CV
           </Link>
