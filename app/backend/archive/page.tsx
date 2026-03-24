@@ -3,7 +3,6 @@ import { ArrowLeft } from 'lucide-react';
 import sessionsData from '@/data/sessions.json';
 
 export default function BackendArchive() {
-  // Group by session
   const sessions = sessionsData.reduce((acc, item) => {
     const existing = acc.find(s => s.session === item.session);
     if (existing) {
@@ -47,6 +46,8 @@ export default function BackendArchive() {
                       <span className={`inline-block text-xs px-2 py-0.5 rounded ${
                         lesson.status.includes('struggled') 
                           ? 'bg-amber-900/30 text-amber-400' 
+                          : lesson.status.includes('backfilled')
+                          ? 'bg-neutral-800 text-neutral-400'
                           : 'bg-blue-900/30 text-blue-400'
                       }`}>
                         {lesson.status}
@@ -55,6 +56,18 @@ export default function BackendArchive() {
                   </div>
 
                   <div className="space-y-4">
+                    <div>
+                      <p className="text-xs text-neutral-500 uppercase tracking-wider mb-1">Assignment</p>
+                      <p className="text-neutral-300 text-sm bg-neutral-950 rounded-lg p-3 border border-neutral-800">{lesson.assignment}</p>
+                    </div>
+
+                    <div>
+                      <p className="text-xs text-neutral-500 uppercase tracking-wider mb-1">Solution</p>
+                      <pre className="bg-neutral-950 rounded-lg p-3 border border-neutral-800 overflow-x-auto text-sm">
+                        <code className="text-blue-300">{lesson.code}</code>
+                      </pre>
+                    </div>
+
                     <div>
                       <p className="text-xs text-neutral-500 uppercase tracking-wider mb-1">Concept</p>
                       <p className="text-neutral-300 text-sm">{lesson.concept}</p>
@@ -65,29 +78,33 @@ export default function BackendArchive() {
                       <p className="text-neutral-300 text-sm">{lesson.how}</p>
                     </div>
 
-                    <div>
-                      <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Ratings</p>
-                      <div className="flex flex-wrap gap-2">
-                        {Object.entries(lesson.ratings).map(([key, value]) => (
-                          <div key={key} className="bg-neutral-800 rounded px-3 py-1">
-                            <span className="text-neutral-400 text-xs">{key}: </span>
-                            <span className="text-white text-xs font-medium">{value}</span>
-                          </div>
-                        ))}
+                    {Object.keys(lesson.ratings).length > 0 && (
+                      <div>
+                        <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Ratings</p>
+                        <div className="flex flex-wrap gap-2">
+                          {Object.entries(lesson.ratings).map(([key, value]) => (
+                            <div key={key} className="bg-neutral-800 rounded px-3 py-1">
+                              <span className="text-neutral-400 text-xs">{key}: </span>
+                              <span className="text-white text-xs font-medium">{value}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
-                    <div>
-                      <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Key takeaways</p>
-                      <ul className="space-y-1">
-                        {lesson.takeaways.map((takeaway, i) => (
-                          <li key={i} className="text-blue-400 text-sm flex gap-2">
-                            <span className="text-neutral-600">→</span>
-                            <span>{takeaway}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {lesson.takeaways.length > 0 && (
+                      <div>
+                        <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Key takeaways</p>
+                        <ul className="space-y-1">
+                          {lesson.takeaways.map((takeaway, i) => (
+                            <li key={i} className="text-blue-400 text-sm flex gap-2">
+                              <span className="text-neutral-600">→</span>
+                              <span>{takeaway}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
