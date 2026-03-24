@@ -12,7 +12,7 @@ export default function Learning() {
       </Link>
       
       <header className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Learning</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Backend Dev</h1>
         <p className="text-neutral-400">
           Tracking my progress through{' '}
           <a 
