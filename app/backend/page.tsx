@@ -70,10 +70,10 @@ export default function Backend() {
         
         <div className="mt-6 pt-6 border-t border-neutral-800">
           <Link 
-            href="/backend/archive"
+            href="/backend/sessions"
             className="text-blue-400 hover:text-blue-300 hover:underline text-sm"
           >
-            Full session notes (with ratings & detailed write-ups) →
+            Full session notes (with assignments, code & detailed write-ups) →
           </Link>
         </div>
       </section>
