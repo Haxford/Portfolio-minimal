@@ -3,8 +3,20 @@ import { ArrowLeft } from 'lucide-react';
 import BootdevHeatmap from '@/components/BootdevHeatmap';
 import bootdevData from '@/data/bootdev.json';
 
+interface HardLesson {
+  title: string;
+  difficulty: string;
+  concept: string;
+  note: string;
+}
+
 export default function Backend() {
-  const { profile, achievements, heatmap, hardLessons } = bootdevData;
+  const { profile, achievements, heatmap, hardLessons } = bootdevData as {
+    profile: typeof bootdevData.profile;
+    achievements: typeof bootdevData.achievements;
+    heatmap: Record<string, number>;
+    hardLessons: HardLesson[];
+  };
 
   return (
     <div className="max-w-4xl mx-auto">
