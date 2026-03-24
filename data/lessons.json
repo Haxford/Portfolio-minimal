@@ -1,0 +1,67 @@
+[
+  {
+    "lesson": "Comparison Operator Evaluations",
+    "concept": "Booleans, comparison operators (==, >), storing comparison results",
+    "takeaway": "Always attempt first — a failed attempt teaches more than a correct answer you didn't earn. Run your code early and often."
+  },
+  {
+    "lesson": "If Statements",
+    "concept": "if/else structure, == comparison, exact string matching",
+    "takeaway": "Punctuation matters in Python strings — copy exact strings including spaces, capitalisation, and punctuation."
+  },
+  {
+    "lesson": "Should Serve Drinks (Bartender)",
+    "concept": "Inverted logic, elif, or operator, not operator, boolean simplification",
+    "takeaway": "Chained comparisons like `time < 5 > 10` don't work — write them explicitly: `time < 5 or time > 10`."
+  },
+  {
+    "lesson": "Mount Rental",
+    "concept": ">= comparison, indentation as scope, fallback return without else",
+    "takeaway": "Indentation is structure, not style. Ask: what lines should only run if this condition is true? Those get indented."
+  },
+  {
+    "lesson": "Combat Advantage",
+    "concept": "if/elif/else blocks, setting variables inside conditionals",
+    "takeaway": "Watch `>` vs `>=` carefully — at boundary values they produce different results."
+  },
+  {
+    "lesson": "For Loops",
+    "concept": "for loop syntax, range(), indentation as loop body",
+    "takeaway": "range(0, 200) gives you 0 to 199 — end is exclusive. Always double-check range boundaries."
+  },
+  {
+    "lesson": "Range Continued",
+    "concept": "Step parameter, counting up/down with custom increments",
+    "takeaway": "range(0, 10, 2) = 0,2,4,6,8. When counting down, step must be negative: range(10, 0, -1)."
+  },
+  {
+    "lesson": "While Loops",
+    "concept": "while vs for, combining conditions with and, += and -= inside loops",
+    "takeaway": "Calculating vs assigning: `x - 2` throws the result away. Use `x -= 2` to actually change the variable. return goes outside the loop."
+  },
+  {
+    "lesson": "List Length",
+    "concept": "len() function, last index = len(list) - 1",
+    "takeaway": "Simple one-liner patterns often work — read the problem twice before overcomplicating."
+  },
+  {
+    "lesson": "List Updates",
+    "concept": "Mutating a list by index: list[i] = new_value",
+    "takeaway": "Assigning to list[i] changes the original — not a copy. Worth remembering when lists get passed between functions."
+  },
+  {
+    "lesson": "Find Max",
+    "concept": "Accumulator pattern, float('-inf') as sentinel value",
+    "takeaway": "When finding the biggest thing in a set, start at float('-inf') so the first real value always wins."
+  },
+  {
+    "lesson": "Find an Item in a List",
+    "concept": "for item in list syntax, loop variable naming for readability",
+    "takeaway": "Loop variable names can be meaningful: 'for leather in items' reads better than 'for x in items'."
+  },
+  {
+    "lesson": "Check Character Levels",
+    "concept": "Index-based list comparison, tracking changes between lists",
+    "takeaway": "Pattern recognition matters — if two lists need comparing element-by-element, track the indices."
+  }
+]

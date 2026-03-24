@@ -1,0 +1,175 @@
+[
+  {
+    "session": "Session 1",
+    "lesson": "Comparison Operator Evaluations",
+    "status": "Completed",
+    "concept": "Booleans (True/False), comparison operators (==, >, etc.), storing comparison results in variables, returning multiple values",
+    "assignment": "Create the following variables using comparison operators. Return them in this order: is_mustang_edward_same, is_alphonse_edward_same, is_winry_alphonse_same. The context of the parameter names should tell you how to make these comparisons.",
+    "code": "def compare_heights(edward_height, alphonse_height, winry_height, mustang_height):\n    is_mustang_edward_same = mustang_height == edward_height\n    is_alphonse_edward_same = alphonse_height == edward_height\n    is_winry_alphonse_same = winry_height == alphonse_height\n    return is_mustang_edward_same, is_alphonse_edward_same, is_winry_alphonse_same",
+    "how": "Good understanding. Deliberately testing Zed AI workflow — attempted first, used AI to explore, then solved solo on boot.dev. Traced through count_posts carefully after a hint and corrected the count = 1 bug himself.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Needs work", "Asking good questions": "Good", "Debugging instinct": "Developing well" },
+    "takeaways": ["Always attempt first — a failed attempt teaches more than a correct answer you didn't earn", "Use AI as a tutor, not a solution machine: attempt → get stuck → ask AI to explain → solve it yourself", "Run your code early and often — trains you to read error messages, a core backend skill"]
+  },
+  {
+    "session": "Session 2",
+    "lesson": "If Statements",
+    "status": "Completed",
+    "concept": "if/else structure, == comparison, returning strings from functions, exact string matching",
+    "assignment": "Complete check_swords_for_army. If number of swords equals number of soldiers, return 'correct amount'. Otherwise return 'incorrect amount'. Punctuation matters!",
+    "code": "def check_swords_for_army(number_of_swords, number_of_soldiers):\n    if number_of_soldiers == number_of_swords:\n        return \"correct amount\"\n    return \"incorrect amount\"",
+    "how": "Solid. Clean and correct — used if for the matching case and let fallback return sit at function level (no else). Returned all strings with correct punctuation.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Good", "Clean code": "Good — no unnecessary else" },
+    "takeaways": ["When a lesson says 'punctuation matters', copy strings exactly — Python string comparison is case and character sensitive"]
+  },
+  {
+    "session": "Session 3",
+    "lesson": "Should Serve Drinks (Bartender)",
+    "status": "Completed",
+    "concept": "Inverted logic (returning False early), elif, or operator, boolean simplification, not operator",
+    "assignment": "Complete should_serve_customer. Return True only if: customer_age >= 21, bartender is not on break, time is between 5 and 10 inclusive. The tips suggest inverting the logic — return False early for each failing condition.",
+    "code": "def should_serve_customer(customer_age, on_break, time):\n    if customer_age < 21:\n        return False\n    elif on_break:\n        return False\n    elif time < 5 or time > 10:\n        return False\n    else:\n        return True",
+    "how": "Grasped inverted logic well. Initially wrote time < 5 > 10 instead of time < 5 or time > 10 — read it out loud, identified fix himself. Applied on_break simplification unprompted. Passed all 9 test cases.",
+    "ratings": { "Concept grasp": "Solid", "Inverted logic pattern": "Good", "Applying lesson tips independently": "Strong", "Operator precision": "Developing — one chained comparison mistake, self-corrected" },
+    "takeaways": ["Chained comparisons like `time < 5 > 10` don't work — write explicitly: `time < 5 or time > 10`", "Simplify booleans: `on_break` not `on_break == True`, `not has_id` not `has_id == 0`"]
+  },
+  {
+    "session": "Session 3",
+    "lesson": "Mount Rental",
+    "status": "Completed",
+    "concept": ">= comparison, returning strings based on condition, indentation as structure, fallback return without else",
+    "assignment": "Complete check_mount_rental. If time_used >= time_purchased return 'overtime charged'. Otherwise return 'no charges yet'. Bonus: try without an else statement.",
+    "code": "def check_mount_rental(time_used, time_purchased):\n    if time_used >= time_purchased:\n        return \"overtime charged\"\n    return \"no charges yet\"",
+    "how": "Got comparison operator right first time. Had both return statements inside if block initially. Once explained using parent/child framing — 'the if is the child, the function is the parent' — understood immediately and fixed it. Final solution has no else.",
+    "ratings": { "Concept grasp": "Solid", "Indentation awareness": "Developing — needed one explanation, then got it", "Applying bonus pattern": "Good" },
+    "takeaways": ["Indentation is structure, not style. Ask: what lines should only run if this condition is true? Those get indented. Everything else stays at the parent level"]
+  },
+  {
+    "session": "Session 3",
+    "lesson": "Combat Advantage",
+    "status": "Completed (struggled but got through independently)",
+    "concept": "if/elif/else blocks, > and ==, setting variables inside conditionals, returning multiple values",
+    "assignment": "Complete combat_evaluation. Set advantage=True if player_power > enemy_defense, evenly_matched=True if equal, otherwise disadvantage=True. Set the remaining variables to False.",
+    "code": "def combat_evaluation(player_power, enemy_defense):\n    advantage, disadvantage, evenly_matched = False, False, False\n\n    if player_power > enemy_defense:\n        advantage = True\n    elif player_power == enemy_defense:\n        evenly_matched = True\n    else:\n        disadvantage = True\n\n    return advantage, disadvantage, evenly_matched",
+    "how": "Completed after struggling — the right outcome. Indentation clicked with parent/child framing. Initially wrote age > 18 instead of >= 18 and had string case error — both self-corrected after leading questions. Applied on_break simplification unprompted.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Good — always attempts first now", "Debugging instinct": "Improving — traces through issues well", "Applying lesson tips": "Good" },
+    "takeaways": ["Watch > vs >= — at boundary values they produce different results. Double-check threshold conditions"]
+  },
+  {
+    "session": "Session 4",
+    "lesson": "For Loops",
+    "status": "Completed",
+    "concept": "for loop syntax, range(), indentation as loop body, printing values inside loops",
+    "assignment": "Write a for loop in print_numbers that logs the numbers 0-199 to the console.",
+    "code": "def print_numbers():\n    for i in range(0, 200):\n        print(i)",
+    "how": "Correct first time. Clean for loop with the right range (0, 200) to print 0–199.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Good", "Clean code": "Good" },
+    "takeaways": ["range(0, 200) gives you 0 to 199 — end is exclusive. Always double-check your range boundaries"]
+  },
+  {
+    "session": "Session 4",
+    "lesson": "Range Continued",
+    "status": "Completed",
+    "concept": "Step parameter in range(), counting up by custom increments, counting down with negative step",
+    "assignment": "Fix the for loop in count_down. It takes start and end inputs where start > end. Use a negative step to print every integer counting down from start (inclusive) to end (exclusive).",
+    "code": "def count_down(start, end):\n    for i in range(start, end, -1):\n        print(i)",
+    "how": "Had the right idea (negative step) from the start. Had a syntax error on first attempt, resolved it, and the fix was minimal and clean.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Good — knew the answer, syntax tripped him up briefly", "Final solution": "Clean and correct" },
+    "takeaways": ["range(0, 10, 2) = 0, 2, 4, 6, 8. When counting down, step must be negative: range(10, 0, -1) gives 10, 9, 8...1", "for vs while: use for when you know how many times to loop, while when you loop until something changes"]
+  },
+  {
+    "session": "Session 5",
+    "lesson": "While Loops",
+    "status": "Completed",
+    "concept": "while loops, combining conditions with and, mutating variables inside loops with += and -=, placing return outside the loop",
+    "assignment": "Complete regenerate using a while loop. While current_health < max_health AND enemy_distance > 3: add 1 to health and subtract 2 from enemy_distance. Return the new current_health. Place return outside the loop.",
+    "code": "def regenerate(current_health, max_health, enemy_distance):\n    while current_health < max_health and enemy_distance > 3:\n        current_health += 1\n        enemy_distance -= 2\n    return current_health",
+    "how": "First attempt had the right instinct but used a second while loop instead of combining both conditions, and wrote enemy_distance - 2 instead of enemy_distance -= 2. Once shown a parallel fuel tank example, mapped concepts across correctly. 8/8 tests passing.",
+    "ratings": { "Concept grasp": "Solid", "First attempt": "Partial — right idea, wrong syntax", "Pattern transfer": "Good — applied example to own problem cleanly", "Final solution": "Clean and correct" },
+    "takeaways": ["Calculating vs assigning: `x - 2` calculates and throws away. Use `x -= 2` to actually change the variable", "return goes outside the loop — inside = returns after first iteration, outside = runs once loop finishes"]
+  },
+  {
+    "session": "Session 6",
+    "lesson": "List Length",
+    "status": "Completed",
+    "concept": "len() function, last index = len(list) - 1",
+    "assignment": "Complete get_last_index. Return the length of the inventory list minus 1.",
+    "code": "def get_last_index(inventory):\n    return len(inventory) - 1",
+    "how": "Solved first run, recognised the one-liner approach independently.",
+    "ratings": { "Concept grasp": "Solid", "Independent attempt": "Good" },
+    "takeaways": ["Simple one-liner patterns often work — read the problem twice before overcomplicating"]
+  },
+  {
+    "session": "Session 6",
+    "lesson": "List Updates",
+    "status": "Completed",
+    "concept": "Mutating a list by index: list[i] = new_value",
+    "assignment": "Complete smelt_ore. Check if inventory[1] == 'Iron Ore'. If so, change it to 'Iron Bar'. Return the inventory.",
+    "code": "def smelt_ore(inventory):\n    if inventory[1] == \"Iron Ore\":\n        inventory[1] = \"Iron Bar\"\n    return inventory",
+    "how": "Solved correctly, one small lookup (index reassignment syntax) via search rather than asking — found the pattern and adapted it. Solution was clean and minimal.",
+    "ratings": { "Concept grasp": "Solid", "Self-correction": "Good — searched instead of asking" },
+    "takeaways": ["Assigning to list[i] changes the original — not a copy. Worth remembering when lists get passed between functions"]
+  },
+  {
+    "session": "Session 6",
+    "lesson": "Match Countdown (backfilled)",
+    "status": "Completed",
+    "concept": "range() with negative step, conditional print on final iteration",
+    "assignment": "Write a countdown from 10 to 1 printing '10...', '9...' etc. At 1 print '1...Fight!'",
+    "code": "def countdown_to_start():\n    for i in range(10, 0, -1):\n        if i == 1:\n            print(f\"{i}...Fight!\")\n        else:\n            print(f\"{i}...\")",
+    "ratings": {},
+    "takeaways": []
+  },
+  {
+    "session": "Session 6",
+    "lesson": "Continue Statement (backfilled)",
+    "status": "Completed",
+    "concept": "continue statement to skip loop iterations, counter-based pattern",
+    "assignment": "Complete award_enchantments. Use a counter that resets every 3 quests. Only award enchantment when counter reaches 3. Strength = quest_number * 5.",
+    "code": "def award_enchantments(start, end, step):\n    counter = 0\n    for quest_number in range(start, end, step):\n        counter += 1\n        if counter < 3:\n            continue\n        counter = 0\n        enchantment_strength = quest_number * 5\n        print(f\"Enchantment of strength {enchantment_strength} awarded for completing {quest_number} quests!\")",
+    "ratings": {},
+    "takeaways": ["continue skips to next iteration immediately — useful for avoiding unnecessary work inside loops"]
+  },
+  {
+    "session": "Session 6",
+    "lesson": "XP Points (backfilled)",
+    "status": "Completed",
+    "concept": "Accumulator pattern, running total inside a for loop",
+    "assignment": "Complete calculate_experience_points. Each level requires level * 5 XP. Level 1 starts at 0 XP. Return total XP at the given level.",
+    "code": "def calculate_experience_points(level):\n    total_xp = 0\n    for i in range(1, level):\n        total_xp = total_xp + (i * 5)\n    return total_xp",
+    "ratings": {},
+    "takeaways": ["Accumulator pattern: a variable updated inside a loop that carries state across iterations"]
+  },
+  {
+    "session": "Session 7",
+    "lesson": "Find an Item in a List",
+    "status": "Completed",
+    "concept": "for item in list syntax, loop variable naming for readability",
+    "assignment": "Complete contains_leather_scraps using no-index syntax. Iterate over items. If you find 'Leather Scraps', set found = True.",
+    "code": "def contains_leather_scraps(items):\n    found = False\n    for leather in items:\n        if leather == \"Leather Scraps\":\n            found = True\n    return found",
+    "how": "Solved in ~2 minutes after initial hesitation on loop variable naming.",
+    "ratings": { "Concept grasp": "Solid", "Time to solve": "~2 minutes" },
+    "takeaways": ["Loop variable names can be meaningful: 'for leather in items' reads better than 'for x in items'"]
+  },
+  {
+    "session": "Session 7",
+    "lesson": "Check Character Levels",
+    "status": "Completed",
+    "concept": "Index-based list comparison, tracking changes between lists",
+    "assignment": "Complete check_character_levels. Loop over indexes. If old_character_levels[i] < new_character_levels[i], print i.",
+    "code": "def check_character_levels():\n    old_character_levels = [1, 42, 43, 53, 12, 3, 32, 34, 54, 32, 43]\n    new_character_levels = [1, 42, 45, 54, 12, 3, 32, 38, 54, 32, 42]\n    for i in range(0, len(old_character_levels)):\n        if old_character_levels[i] < new_character_levels[i]:\n            print(i)",
+    "how": "Solved correctly, understood the index comparison pattern.",
+    "ratings": { "Concept grasp": "Solid", "Pattern recognition": "Good" },
+    "takeaways": ["Pattern recognition: if two lists need comparing element-by-element, track the indices"]
+  },
+  {
+    "session": "Session 7",
+    "lesson": "Find Max",
+    "status": "Completed",
+    "concept": "Accumulator pattern, float('-inf') as sentinel value",
+    "assignment": "Complete find_max. Start max_so_far = float('-inf'). Compare each number to max_so_far. If larger, replace. Return max_so_far. Return float('-inf') if list is empty.",
+    "code": "def find_max(nums):\n    max_so_far = float(\"-inf\")\n    for num in nums:\n        if max_so_far < num:\n            max_so_far = num\n    return max_so_far",
+    "how": "Struggled with float('-inf') as a starting point. Breakthrough achieved after Socratic questioning. Applied max_so_far < num without being told — chose comparison direction that reads most naturally.",
+    "ratings": { "Concept grasp": "Developing — breakthrough after Socratic questioning", "Pattern application": "Good — applied max_so_far < num unprompted" },
+    "takeaways": ["The -inf trick: when finding the biggest thing in a set and you don't know what's in it, start at float('-inf') so the first real value always wins"]
+  }
+]
