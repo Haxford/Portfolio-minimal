@@ -74,7 +74,7 @@ export default function CV() {
               </div>
               <div className="text-blue-400 text-sm mb-3">Oasis Community Learning</div>
               <p className="text-neutral-400 text-sm mb-3 italic">
-                Progression: Volunteer (Oct 2022) → Level 3 Azure Support Specialist Apprenticeship (2023–2025, Distinction) → employed directly.
+                Progression: Volunteer (Oct 2022) → IT Support Technician Apprenticeship (2023–2025, Distinction) → employed directly.
               </p>
               <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-300 text-sm">
                 <li>Manage ~1,000+ devices across multiple academy sites using Microsoft Intune and Jamf</li>
@@ -88,7 +88,7 @@ export default function CV() {
 
             <div>
               <div className="flex justify-between items-baseline mb-1">
-                <h3 className="font-semibold text-white text-lg">Apprentice — Azure Support Specialist (Level 3, Distinction)</h3>
+                <h3 className="font-semibold text-white text-lg">Apprentice — IT Support Technician (Level 3, Distinction)</h3>
                 <span className="text-sm text-neutral-500 font-mono">2023 — 2025</span>
               </div>
               <div className="text-blue-400 text-sm mb-3">Oasis Community Learning</div>
@@ -125,13 +125,19 @@ export default function CV() {
           <ul className="space-y-4 text-neutral-300">
             <li>
               <div className="flex justify-between">
+                <span className="text-white">Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                <span className="text-green-400 text-sm">April 2025 — Score: 794</span>
+              </div>
+            </li>
+            <li>
+              <div className="flex justify-between">
                 <span className="text-white">CompTIA Network+</span>
                 <span className="text-neutral-500 text-sm">In Progress</span>
               </div>
             </li>
             <li>
               <div className="flex justify-between">
-                <span className="text-white">Level 3 Azure Support Specialist Apprenticeship</span>
+                <span className="text-white">IT Support Technician</span>
                 <span className="text-green-400 text-sm">Distinction, 2025</span>
               </div>
             </li>
