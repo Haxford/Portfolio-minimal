@@ -209,7 +209,14 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <ShieldCheck className="text-green-500" size={20} />
             <div>
-              <p className="text-white font-medium">Level 3 Azure Support Specialist</p>
+              <p className="text-white font-medium">Microsoft Certified: Azure Fundamentals (AZ-900)</p>
+              <p className="text-xs text-neutral-500">April 2025 — Score: 794</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <ShieldCheck className="text-green-500" size={20} />
+            <div>
+              <p className="text-white font-medium">IT Support Technician</p>
               <p className="text-xs text-neutral-500">Distinction (2025)</p>
             </div>
           </div>
